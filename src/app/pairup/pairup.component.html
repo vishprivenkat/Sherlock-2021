@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-content>
+        <div class="header">
+            <h2>PAIR UP WITH WATSON TO PLAY</h2>
+            <br> Ensure that your game partner has registered in the official page of KURUKSHETRA'21.
+            <br>
+            <br><b>Only Enter the numbers in the K! ID of your Watson Team Mate</b>
+            <br>
+            <br> Eg: if K! ID = k!12345678, enter only 12345678.
+            <br>
+        </div>
+        <br>
+        <form (ngSubmit)="onSubmit()" name="watsonForm" [formGroup]="watsonForm">
+            <div class="emailInput">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Watson's K! ID</mat-label>
+                    <input type="number" formControlName="kid" matInput placeholder="Enter Watson's K! ID " required />
+                    <mat-error *ngIf="watsonForm.controls['kid'].touched &&  watsonForm.controls['kid'].invalid">
+                        Enter the numbers only!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br>
+            <button mat-raised-button class="kbutton">&nbsp;&nbsp;&nbsp;INITIATE PAIR UP</button>
+            <br><br>
+
+        </form>
+
+        <button mat-raised-button class="playgame" (click)="checkToProceed()"><mat-icon  style = "color: #fff;">play_circle </mat-icon>&nbsp;&nbsp;&nbsp;START PLAY</button>
+
+    </mat-card-content>
+</mat-card>

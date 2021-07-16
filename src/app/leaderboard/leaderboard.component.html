@@ -1,0 +1,53 @@
+<div class="overlay" *ngIf="visibility">
+    <mat-card class="errorCard">
+        <mat-card-content>
+            <div class="errorheader">
+                <h2>{{errorMessage}}</h2>
+
+            </div>
+            <br>
+
+            <button mat-raised-button class="errorkbutton" (click)="reload()">&nbsp;&nbsp;&nbsp;CLICK TO RELOAD LEADERBOARD</button>
+
+
+        </mat-card-content>
+    </mat-card>
+
+</div>
+
+<div class="header-leaderboard" [ngStyle]="!visibility ? { 'filter':'blur(0px)'} : { 'filter':'blur(8px)' }">
+    <h2>Leaderboard</h2> <br><br>
+    <br>
+    <img src="../../assets/podium.png">
+    <br><br>
+    <h3><i>Organizer's Decision Remains Final</i></h3>
+</div>
+
+<br><br>
+<div class="enclose-table" [ngStyle]="!visibility ? { 'filter':'blur(0px)'} : { 'filter':'blur(8px)' }">
+    <mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="Player 1 K!ID">
+            <mat-header-cell *matHeaderCellDef class="highlight"> K! ID 1 </mat-header-cell>
+            <mat-cell *matCellDef="let player" class="inner-highlight">{{ player.k_ids[0] }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Player 2 K!ID">
+            <mat-header-cell *matHeaderCellDef class="highlight"> K! ID 2</mat-header-cell>
+            <mat-cell *matCellDef="let player" class="inner-highlight">{{ player.k_ids[1] }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Player 1">
+            <mat-header-cell *matHeaderCellDef class="highlight">Player 1</mat-header-cell>
+            <mat-cell *matCellDef="let player" class="inner-highlight">{{ player.names[0] }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Player 2">
+            <mat-header-cell *matHeaderCellDef class="highlight">Player 2</mat-header-cell>
+            <mat-cell *matCellDef="let player" class="inner-highlight">{{ player.names[1] }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Points">
+            <mat-header-cell *matHeaderCellDef class="highlight">Points</mat-header-cell>
+            <mat-cell *matCellDef="let player" class="inner-highlight">{{ player.points }}</mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    </mat-table>
+</div>

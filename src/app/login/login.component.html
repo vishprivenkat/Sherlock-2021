@@ -1,0 +1,45 @@
+<mat-card>
+    <mat-card-content>
+        <div class="header">
+            <h2>LOGIN TO START GAME</h2>
+            <br> Ensure that you have registered yourself in the main Kurukshetra'21 Website. If not, click the Signup for K! button to register.
+        </div>
+        <br>
+        <form (ngSubmit)="onSubmit()" name="loginForm" [formGroup]="loginForm">
+            <div class="emailInput">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput placeholder="Enter email address" required />
+                    <mat-error *ngIf="loginForm.controls['email'].invalid">
+                        Email is required. Enter Email in the correct format.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+                    <span mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide" class="hide">
+            <mat-icon>
+                {{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+        </span>
+                    <mat-error *ngIf="!loginForm.controls['password'].valid">
+                        Password is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br>
+            <button mat-raised-button class="playgame"><mat-icon  style = "color: #fff;">play_circle </mat-icon>&nbsp;&nbsp;&nbsp;LOGIN TO PLAY</button>
+            <br>
+            <br>
+
+        </form>
+        <button mat-raised-button class="gsignbtn" (click)="callGoogleSignin()">&nbsp;&nbsp;&nbsp;SIGN IN WITH GOOGLE</button>
+        <br><br>
+        <button mat-raised-button (click)="redirectTo()" class="kbutton">SIGNUP FOR K!</button>
+
+    </mat-card-content>
+</mat-card>

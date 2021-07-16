@@ -1,0 +1,162 @@
+.mat-table {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 90vw;
+    animation-name: fadeIn;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    margin-bottom: 1vh;
+}
+
+.highlight {
+    color: white;
+    font-size: 1.7vw;
+}
+
+.inner-highlight {
+    color: white;
+    font-size: 1.5vh;
+}
+
+.mat-header-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.mat-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enclose-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 723px) {
+    .highlight {
+        color: white;
+        font-size: 1.7vh;
+    }
+    .inner-highlight {
+        color: white;
+        font-size: 1.5vh;
+    }
+}
+
+.header-leaderboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10vh;
+    h3 {
+        color: rgb(187, 184, 184);
+        font-size: 2vh;
+        font-weight: lighter;
+    }
+    h2 {
+        color: white;
+        font-size: 5vh;
+        font-weight: lighter;
+    }
+    img {
+        width: 10vh;
+        height: 10vh;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.errorCard {
+    max-width: 50vh;
+    margin: 3em auto;
+    text-align: center;
+    max-height: 80vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    /* or: Xms */
+    animation-timing-function: ease-out;
+    margin-top: 20vh;
+    /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+}
+
+.errorheader {
+    text-align: center;
+    color: rgb(7, 7, 7);
+    h2 {
+        text-shadow: 3px 3px 10px #fff;
+        font-weight: bold;
+    }
+}
+
+.errorkbutton {
+    background-color: #0c1038;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+.errorkbutton:hover {
+    background-color: #1d2795;
+    color: white;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width:500px) {
+    .errorCard {
+        max-width: 70vw;
+        margin: 3em auto;
+        text-align: center;
+        max-height: 80vh;
+        background-color: rgba(255, 255, 255, 0.7);
+        animation-name: fadeIn;
+        animation-duration: 2s;
+        /* or: Xms */
+        animation-timing-function: ease-out;
+        margin-top: 20vh;
+        /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+    }
+}

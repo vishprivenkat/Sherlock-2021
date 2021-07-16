@@ -1,0 +1,34 @@
+<div class="container">
+    <mat-card>
+        <h1>Welcome to Play Sherlock</h1>
+        <br><br>
+        <mat-card-content>
+
+            <div class="header">
+                <h2><a routerLink="/instructions">Instructions</a></h2>
+                <a routerLink='/instructions'><img src='../../assets/instructions.png' class='image' /></a>
+
+
+            </div>
+
+            <div class="header">
+                <h2><a routerLink='/contact'>Support and Credits</a></h2>
+                <a routerLink='/contact'><img src='../../assets/contact.png' class='image' /></a>
+
+            </div>
+
+            <div class="header" *ngIf="loginStatus() ">
+                <h2><a routerLink='/game'>Play Game</a></h2>
+                <a routerLink='/game'><img src='../../assets/detective.png' class='image' /></a>
+
+            </div>
+
+            <div class="header" *ngIf="!loginStatus()">
+                <h2><a routerLink='/login'>Login</a></h2>
+                <a routerLink='/login'><img src='../../assets/detective.png' class='image' /></a>
+
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>

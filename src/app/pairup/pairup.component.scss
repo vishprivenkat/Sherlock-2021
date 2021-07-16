@@ -1,0 +1,113 @@
+$primary: #fff;
+mat-card {
+    max-width: 50vh;
+    margin: 3em auto;
+    text-align: center;
+    max-height: 80vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    /* or: Xms */
+    animation-timing-function: ease-out;
+}
+
+.header {
+    text-align: center;
+    color: rgb(7, 7, 7);
+    h2 {
+        font-weight: bold;
+        text-shadow: 3px 3px 10px #fff;
+    }
+}
+
+.full-width {
+    width: 80%;
+}
+
+.email-input {
+    padding-top: 1vh;
+    color: #fff;
+}
+
+.aLink {
+    float: right;
+    padding-right: 60px;
+    text-decoration: none;
+}
+
+// mat-icon-stepper selected color change
+button {
+    width: 80%;
+    border-radius: 0;
+    transition: background 400ms;
+    padding: 0.5vh 0.5vh;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.kbutton {
+    background-color: #0c1038;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+.kbutton:hover {
+    background-color: #2633bd;
+    color: white;
+}
+
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.gsignbtn {
+    background-color: #4c8bf5;
+    color: #fff
+}
+
+.gsignbtn:hover {
+    background-color: #3867b9;
+    color: #fff
+}
+
+.playgame {
+    background-color: #b80a04;
+    color: #fff;
+}
+
+.playgame:hover {
+    background-color: #259959;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:500px) {
+    mat-card {
+        max-width: 70vw;
+        margin: 3em auto;
+        text-align: center;
+        max-height: 80vh;
+        background-color: rgba(255, 255, 255, 0.7);
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        /* or: Xms */
+        animation-timing-function: ease-out;
+    }
+}

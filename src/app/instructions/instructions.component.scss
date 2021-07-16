@@ -1,0 +1,64 @@
+mat-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 90vh;
+    h2 {
+        color: rgb(180, 177, 177);
+        font-weight: lighter;
+        font-size: 3vh;
+    }
+    h2:hover {
+        color: #fff;
+    }
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    span {
+        font-size: 1.8vh;
+        font-weight: lighter;
+    }
+    animation-duration: 1.5s;
+    animation-name:fadeIn;
+    animation-timing-function: ease-in;
+    margin-bottom: 2vh;
+    margin-left: 2vh;
+    margin-right:2vh;
+    margin-top:5vh;
+}
+
+mat-card-content {
+    color: #fff;
+}
+
+li {
+    color: rgb(255, 255, 255);
+    font-size: 2vh;
+    font-weight: lighter;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header-leaderboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10vh;
+    h2 {
+        color: white;
+        font-size: 4vh;
+        font-weight: lighter;
+    }
+}

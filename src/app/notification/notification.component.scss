@@ -1,0 +1,37 @@
+.notifications {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    min-width: 40vh;
+    max-width: 40vh;
+    .notification {
+        margin: 0.5vh;
+        border-radius: 0.5vh;
+        color: #fff;
+        overflow: hidden;
+        .title {
+            background: rgba(77, 76, 76, 0.6);
+            padding-left: 1vh;
+            font-weight: bold;
+        }
+        .message {
+            background: rgba(58, 57, 57, 0.4);
+            padding: 1vh;
+            max-height: 20vh;
+            overflow-y: auto;
+        }
+        &.info {
+            background-color: rgb(65, 45, 247);
+        }
+        &.success {
+            background-color: rgba(27, 158, 119);
+        }
+        &.warning {
+            background-color: rgba(217, 195, 2);
+        }
+        &.error {
+            background-color: rgba(247, 18, 18);
+        }
+    }
+}

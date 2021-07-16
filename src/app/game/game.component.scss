@@ -1,0 +1,319 @@
+.swiper-container {
+    width: 100%;
+    height: 30vh;
+    margin: 50px auto;
+}
+
+.swiper-slide {
+    background: rgba(207, 206, 206, 0.6);
+    color: #000;
+    text-align: center;
+    line-height: 600px;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+    }
+}
+
+swiper {
+    height: 75vh;
+    width: 90vh;
+}
+
+.playgame {
+    background-color: #ff0800;
+    color: #fff;
+}
+
+.playgame:hover {
+    background-color: #580606;
+}
+
+.answer {
+    display: flex;
+    background-color: aliceblue;
+}
+
+.question-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-top: 10vh;
+}
+
+mat-card {
+    max-width: 50vh;
+    margin: 3em auto;
+    text-align: center;
+    max-height: 80vh;
+    background-color: rgb(167, 163, 163);
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    /* or: Xms */
+    animation-timing-function: ease-out;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: #bbb;
+    color: black;
+}
+
+.back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.header {
+    text-align: center;
+    color: rgb(7, 7, 7);
+    h2 {
+        font-weight: bold;
+        text-shadow: 3px 3px 10px #fff;
+    }
+}
+
+@media only screen and (min-width: 612px) and (max-width: 1212px) {
+    .question-slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    swiper {
+        height: 50vh;
+        width: 50vh;
+        margin-left: 1vh;
+    }
+}
+
+@media only screen and (max-width: 611px) {
+    .question-slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    swiper {
+        height: 40vh;
+        width: 40vh;
+        margin-left: 1vh;
+    }
+    .full-width {
+        width: 50%;
+    }
+}
+
+.full-width {
+    width: 80%;
+}
+
+.email-input {
+    padding-top: 1vh;
+    color: #fff;
+}
+
+.clues {
+    border-radius: 50%;
+    .fa fa-question-circle {
+        color: black;
+    }
+}
+
+.clues:hover {
+    background-color: red;
+    .fa fa-question-circle {
+        color: white;
+    }
+}
+
+.audio {
+    border-radius: 50%;
+    .fa fa-headphones {
+        color: black;
+    }
+}
+
+.audio:hover {
+    background-color: red;
+    .fa fa-headphones {
+        color: #fff;
+    }
+}
+
+.kbutton {
+    background-color: #0c1038;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+.kbutton:hover {
+    background-color: #2633bd;
+    color: white;
+}
+
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.errorCard {
+    max-width: 50vh;
+    margin: 3em auto;
+    text-align: center;
+    max-height: 80vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    /* or: Xms */
+    animation-timing-function: ease-out;
+    margin-top: 20vh;
+    /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+}
+
+.errorheader {
+    text-align: center;
+    color: rgb(7, 7, 7);
+    h2 {
+        text-shadow: 3px 3px 10px #fff;
+        font-weight: bold;
+    }
+}
+
+.errorkbutton {
+    background-color: #0c1038;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+.errorkbutton:hover {
+    background-color: #1d2795;
+    color: white;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.spinner__loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.header-finish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10vh;
+    h2 {
+        color: white;
+        font-size: 5vh;
+        font-weight: lighter;
+    }
+    img {
+        width: 30vh;
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width:1212px) {
+    .header-finish {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10vh;
+        h2 {
+            color: white;
+            font-size: 3vw;
+            font-weight: lighter;
+        }
+        img {
+            width: 30vh;
+            height: 30vh;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    mat-card {
+        max-width: 70vw;
+        margin: 3em auto;
+        text-align: center;
+        max-height: 80vh;
+        background-color: rgb(167, 163, 163);
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        /* or: Xms */
+        animation-timing-function: ease-out;
+    }
+    .errorCard {
+        max-width: 70vw;
+        margin: 3em auto;
+        text-align: center;
+        max-height: 80vh;
+        background-color: rgba(255, 255, 255, 0.7);
+        animation-name: fadeIn;
+        animation-duration: 2s;
+        /* or: Xms */
+        animation-timing-function: ease-out;
+        margin-top: 20vh;
+        /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+    }
+}
+
+.titleHeader {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 2.4vh;
+    h2 {
+        font-weight: lighter;
+        font-size: 4vh;
+    }
+}

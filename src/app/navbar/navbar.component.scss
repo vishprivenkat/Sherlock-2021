@@ -1,0 +1,74 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgb(5, 3, 17);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 2vh;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    /* or: Xms */
+    animation-timing-function: ease-out;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.sidenav-header {
+    display: flex;
+    position: fixed;
+    margin-left: 10px;
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav {
+    font-size: 40px;
+    cursor: pointer;
+    color: rgb(184, 179, 179);
+    z-index: 1000;
+}
+
+.nav:hover {
+    color: #ffffff;
+    z-index: 1000;
+}

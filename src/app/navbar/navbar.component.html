@@ -1,0 +1,36 @@
+<div class="sidenav-header">
+    <span class="nav" (click)="increase()">&#9776; </span>
+</div>
+
+<div id="mySidenav" class="sidenav" [style.width.px]='sidenavWidth'>
+    <a (click)="decrease()" [ngStyle]="{'font-size':'50px', 'cursor': 'pointer'}">&times;</a>
+    <a (click)="decrease()" routerLink="/home" *ngIf=' show'>
+        <mat-icon>home</mat-icon>&nbsp;&nbsp;<span>Home</span>
+    </a>
+    <a (click)="decrease()" routerLink="/instructions" *ngIf=' show'>
+        <mat-icon>article</mat-icon>&nbsp;&nbsp;<span>Instructions</span></a>
+    <a (click)="decrease()" routerLink="/contact" *ngIf=' show'>
+        <mat-icon>phone</mat-icon>&nbsp;&nbsp;<span class="contacts">Contact</span></a>
+
+    <a (click)="decrease()" routerLink='/pairup' *ngIf='pairupRouteCheck()  && show'>
+        <mat-icon>link</mat-icon>&nbsp;&nbsp;
+        <span>Pairup</span>
+    </a>
+    <a (click)="decrease()" routerLink="/leaderboard" *ngIf='pairUpCheck()  && show'>
+        <mat-icon>emoji_events</mat-icon>&nbsp;&nbsp;
+        <span>Leaderboard</span>
+    </a>
+    <a (click)="decrease()" routerLink='/game' *ngIf='pairUpCheck()  && show'>
+        <mat-icon>play_arrow</mat-icon>&nbsp;&nbsp;
+        <span>Game</span>
+    </a>
+    <a (click)="decrease()" routerLink="/login" *ngIf='!loginCheck() && show'>
+        <mat-icon>login</mat-icon>&nbsp;&nbsp;
+        <span>Login</span>
+    </a>
+    <a (click)="decrease()" routerLink='/home' *ngIf='loginCheck() && show' (click)='performLogout()'>
+        <mat-icon>logout</mat-icon>&nbsp;&nbsp;
+        <span>Logout</span>
+    </a>
+
+</div>

@@ -1,0 +1,67 @@
+$primary: #fff;
+mat-card {
+    max-width: 50vh;
+    margin: 3em auto;
+    text-align: center;
+    max-height: 80vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    /* or: Xms */
+    animation-timing-function: ease-out;
+    /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+}
+
+.header {
+    text-align: center;
+    color: rgb(7, 7, 7);
+    h2 {
+        text-shadow: 3px 3px 10px #fff;
+        font-weight: bold;
+    }
+}
+
+img {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 10px;
+}
+
+.full-width {
+    width: 80%;
+}
+
+.email-input {
+    padding-top: 1vh;
+    color: #fff;
+}
+
+.aLink {
+    float: right;
+    padding-right: 60px;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    mat-card {
+        max-width: 70vw;
+        margin: 3em auto;
+        text-align: center;
+        max-height: 80vh;
+        background-color: rgba(255, 255, 255, 0.7);
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        /* or: Xms */
+        animation-timing-function: ease-out;
+        /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+    }
+}
